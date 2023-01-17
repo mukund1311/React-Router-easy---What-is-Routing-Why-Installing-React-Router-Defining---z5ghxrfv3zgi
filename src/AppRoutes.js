@@ -9,11 +9,11 @@ import NotFound from './pages/NotFound'
 
 const AppRoutes = () => {
     return (
-        <Switch>
-            <Route exact path='/' component={Index} />
-            <Route path='/home' component={Home} />
-            <Route component={NotFound} />
-        </Switch>
+          <Routes>
+            <Route path='/' element={<Index/>} />
+            <Route path='/home' element={<Home/>} />
+            <Route path = '*' element={<NotFound/>} />
+        </Routes>
     )
 }
 
